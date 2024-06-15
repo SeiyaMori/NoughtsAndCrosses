@@ -28,7 +28,7 @@ namespace NoughtsAndCrosses
     public partial class MainWindow : Window
     {
         private bool humanTurn;
-        private SolidColorBrush defaultColor = Brushes.White;
+        private SolidColorBrush defaultColor = (SolidColorBrush)new BrushConverter().ConvertFrom("#ffbd61");
         private ObservableCollection<Tile> tiles = [];
         private Player currentPlayer;
         private List<List<int>> winningCombos =
@@ -154,10 +154,7 @@ namespace NoughtsAndCrosses
                     ChangePlayer();
                     UpdatedDisplayText();
                 }
-
-                
             }
-            
         }
 
         private void Two_Click(object sender, RoutedEventArgs e)
